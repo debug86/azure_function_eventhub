@@ -20,6 +20,7 @@ module.exports = async function (context, req) {
     //TEST
     var timestamp = new Date().toISOString();
     context.log('Event created at: ', timestamp);
+    context.log('Name for event: ', name);
     context.bindings.outputEventHubMessage = {"name" : name, "timestamp" : timestamp};
     context.done;
 
